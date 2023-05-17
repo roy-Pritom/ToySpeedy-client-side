@@ -4,12 +4,12 @@ import { authContext } from "../../../AuthProvider/AuthProvider";
 
 
 const Header = () => {
-  const { user } = useContext(authContext)
+  const { user,logOut} = useContext(authContext)
   const navLinks = <>
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/'>All Toys</Link></li>
-    <li><Link to='/'>My Toys</Link></li>
-    <li><Link to='/'>Add A Toy</Link></li>
+    {user && <li><Link to='/'>My Toys</Link></li>}
+    {user && <li><Link to='/addToy'>Add A Toy</Link></li>}
     <li><Link to='/'>Blogs</Link></li>
 
 
@@ -39,7 +39,7 @@ const Header = () => {
         {/* <a className="btn">Get started</a> */}
         {
           user ? <div className="">
-            <button className="btn btn-active btn-secondary"> <Link to='/logout'>logout</Link></button>
+            <button className="btn btn-active btn-secondary" onClick={logOut}> logout</button>
           </div>
             :
             <button className="btn btn-active btn-secondary"><Link to='/login'>Login</Link></button>

@@ -36,7 +36,7 @@ const Login = () => {
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div className="card-body">
-                            <h2 className='text-4xl font-bold text-center'>Login!</h2>
+                            <h2 className='text-4xl font-bold text-center'>Please Login!</h2>
                             <form onSubmit={handleLOgin}>
                                 <div className="form-control">
                                     <label className="label">
@@ -58,7 +58,7 @@ const Login = () => {
                                 </div>
                             </form>
                             <div className="">
-                                <p className='text-center'><small>New to Cars doctor? Please <Link to='/register' className='text-orange-600 ml-1'>SignUp</Link></small></p>
+                                <p className='text-center'><small>New to Car market? Please <Link to='/register' className='text-orange-600 ml-1'>SignUp</Link></small></p>
                             </div>
                         </div>
                         <div className="text-center mb-3 pb-2">
