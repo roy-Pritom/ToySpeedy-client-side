@@ -1,7 +1,9 @@
 
 
+
 const MyToysRow = ({ toy, handleDelete }) => {
     const { image, toyName, price, _id } = toy || {}
+
 
     const handleSubmit=(event)=>{
         event.preventDefault();
@@ -80,6 +82,16 @@ const MyToysRow = ({ toy, handleDelete }) => {
                                 <input type="text" name="quantity" placeholder="quantity" className="input input-bordered" />
                             </label>
                         </div>
+{/* id */}
+                        {/* <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Available quantity</span>
+                            </label>
+                            <label className="input-group">
+                                <input type="text" defaultValue={id}  className="input input-bordered" />
+                            </label>
+                        </div> */}
+
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Description</span>

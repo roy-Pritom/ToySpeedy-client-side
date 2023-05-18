@@ -50,6 +50,7 @@ const AddToy = () => {
                                     {...register("name")}
                                     placeholder="user name"
                                     type="text"
+                                    defaultValue={user?.displayName}
 
                                 />
 

@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { authContext } from "../../../AuthProvider/AuthProvider";
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip as ReactTooltip } from "react-tooltip";
 
 
 const Header = () => {
@@ -38,7 +40,11 @@ const Header = () => {
       <div className="navbar-end">
       
         {
-          user ? <div className="">
+          user ? <div className="flex gap-3 items-center">
+           <div className="">
+           <img id="title" src={user?.photoURL} className="w-12 h-12 rounded-full" alt="" />
+            <ReactTooltip anchorId='title' place="bottom" content={user?.displayName}></ReactTooltip>
+           </div>
             <button className="btn btn-active btn-secondary" onClick={logOut}> logout</button>
           </div>
             :

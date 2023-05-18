@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { authContext } from "../../AuthProvider/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
+import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
@@ -17,13 +18,16 @@ const Register = () => {
         const name=form.name.value;
         const password=form.password.value;
         const email=form.email.value
-        console.log(name,password,email);
+        const photoUrl=form.photo.value
+        console.log(photoUrl);
         createUser(email,password)
         .then(result=>{
             const loggedUser=result.user;
             console.log(loggedUser);
             setSuccess('successfully register')
             form.reset();
+            updateUser(loggedUser,name,photoUrl)
+
             logOut();
             navigate('/login')
 
@@ -35,6 +39,14 @@ const Register = () => {
   })
 
     }
+
+    const updateUser = (currentUser,name,photoURL) => {
+        updateProfile(currentUser, {
+            displayName: name, photoURL: photoURL
+        })
+            
+    }
+
     return (
         <div>
         <div className="hero mt-11">
