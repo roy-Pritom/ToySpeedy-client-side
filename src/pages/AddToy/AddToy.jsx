@@ -4,19 +4,26 @@ import { useForm } from "react-hook-form";
 const AddToy = () => {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = toyCarData => {
+        console.log(toyCarData);
+        fetch('http://localhost:5000/postToy',{
+            method:"POST",
+            headers:{
+               'content-type':'application/json'
+            },
+            body:JSON.stringify(toyCarData)
+        })
+        .then(res=>res.json())
+        .then(data=>console.log(data))
+    }
     return (
 
-
-
-
-
-
-        <div className="">
-            <div className="mx-auto w-1/2">
+        <div className="bg-blue-200 mx-auto w-full md:w-7/12 px-10 py-8 rounded-lg my-8">
+            <h2 className="text-center font-bold  mb-8 text-5xl">Add Toy</h2>
+            <div className="">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {errors.exampleRequired && <span>This field is required</span>}
-                    <div className="grid grid-cols-2 gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
                         <div className="form-control">
                             <label className="label">
@@ -28,7 +35,8 @@ const AddToy = () => {
 
                                     {...register("name")}
                                     placeholder="user name"
-                                // defaultValue="Web developer"
+                                    type="text"
+
                                 />
 
 
@@ -47,7 +55,7 @@ const AddToy = () => {
                                 <input className="input input-bordered w-full"
 
                                     {...register("email", { required: true })}
-                                    placeholder="email"
+                                    placeholder="email" type="email"
 
 
                                 />
@@ -65,7 +73,7 @@ const AddToy = () => {
                             </label>
                             <label className="input-group">
                                 <span>SubCategory</span>
-                                <select {...register("category")} className="input input-bordered w-full">
+                                <select {...register("subCategory")} className="input input-bordered w-full">
                                     <option value="Engineering">engineering</option>
                                     <option value="Editor">Editor</option>
                                     <option value="writer">Writer</option>
@@ -131,7 +139,7 @@ const AddToy = () => {
 
                                     {...register("ratting")}
                                     placeholder="ratting"
-                                
+
                                 />
                             </label>
                         </div>
@@ -145,7 +153,7 @@ const AddToy = () => {
 
                                     {...register("quantity")}
                                     placeholder="quantity"
-                                
+
                                 />
                             </label>
                         </div>
@@ -159,18 +167,18 @@ const AddToy = () => {
 
                                     {...register("description")}
                                     placeholder="description"
-                                
+
                                 />
                             </label>
                         </div>
                     </div>
-                   <div className="flex justify-center mt-7">
-                    
-                   <button className="btn btn-secondary" >
-                        <input className="submit-btn" value="Add Toy" type="submit" />
+                    <div className="flex justify-center mt-7">
+
+                        <button className="btn btn-secondary" >
+                            <input className="submit-btn" value="Add Toy" type="submit" />
 
                         </button>
-                   </div>
+                    </div>
                 </form>
             </div>
 
