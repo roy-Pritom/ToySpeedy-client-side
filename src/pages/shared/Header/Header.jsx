@@ -7,7 +7,7 @@ const Header = () => {
   const { user,logOut} = useContext(authContext)
   const navLinks = <>
     <li><Link to='/'>Home</Link></li>
-    <li><Link to='/'>All Toys</Link></li>
+    <li><Link to='/allToys'>All Toys</Link></li>
     {user && <li><Link to='/'>My Toys</Link></li>}
     {user && <li><Link to='/addToy'>Add A Toy</Link></li>}
     <li><Link to='/'>Blogs</Link></li>

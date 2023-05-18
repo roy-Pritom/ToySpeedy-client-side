@@ -5,7 +5,7 @@ import Swal from 'sweetalert2'
 
 const AddToy = () => {
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = toyCarData => {
         console.log(toyCarData);
         fetch('http://localhost:5000/postToy',{
