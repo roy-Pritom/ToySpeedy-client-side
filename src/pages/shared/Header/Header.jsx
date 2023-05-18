@@ -8,7 +8,7 @@ const Header = () => {
   const navLinks = <>
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/allToys'>All Toys</Link></li>
-    {user && <li><Link to='/'>My Toys</Link></li>}
+    {user && <li><Link to='/myToys'>My Toys</Link></li>}
     {user && <li><Link to='/addToy'>Add A Toy</Link></li>}
     <li><Link to='/'>Blogs</Link></li>
 
@@ -36,7 +36,7 @@ const Header = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        {/* <a className="btn">Get started</a> */}
+      
         {
           user ? <div className="">
             <button className="btn btn-active btn-secondary" onClick={logOut}> logout</button>

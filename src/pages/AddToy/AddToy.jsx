@@ -1,32 +1,34 @@
 
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2'
+import { authContext } from "../../AuthProvider/AuthProvider";
 
 
 const AddToy = () => {
+    const { user } = useContext(authContext);
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = toyCarData => {
         console.log(toyCarData);
-        fetch('http://localhost:5000/postToy',{
-            method:"POST",
-            headers:{
-               'content-type':'application/json'
+        fetch('http://localhost:5000/postToy', {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
             },
-            body:JSON.stringify(toyCarData)
+            body: JSON.stringify(toyCarData)
         })
-        .then(res=>res.json())
-        .then(data=>{
-            if(data.insertedId)
-            {
-                Swal.fire({
-                    title: 'success',
-                    text: 'add toy successfully',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                  })
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'success',
+                        text: 'add toy successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
     }
     return (
 
@@ -67,7 +69,8 @@ const AddToy = () => {
                                 <input className="input input-bordered w-full"
 
                                     {...register("email", { required: true })}
-                                    placeholder="email" type="email"
+                                    type="email"
+                                    defaultValue={user?.email}
 
 
                                 />
