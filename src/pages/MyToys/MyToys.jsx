@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { authContext } from "../../AuthProvider/AuthProvider";
 import MyToysRow from "./MyToysRow";
+import Swal from "sweetalert2";
 
 
 const MyToys = () => {
@@ -11,21 +12,42 @@ const MyToys = () => {
         fetch(`http://localhost:5000/myToys/${user?.email}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 setToys(data)
             })
     }, [user])
 
-    const handleDelete=(id)=>{
-        fetch(`http://localhost:5000/myToys/${id}`,{
-         method:"DELETE"
+    const handleDelete = (id) => {
+        // sweet alert 2
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/myToys/${id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(myToysData => {
+                        if (myToysData.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your toy has been deleted.',
+                                'success'
+                            )
+                            const remaining = toys.filter(item => item._id !== id);
+                            setToys(remaining)
+                        }
+                    })
+            }
         })
-        .then(res=>res.json())
-        .then(item=>{
-            console.log(item)
-        })
- 
-     }
+
+    }
 
     return (
         <div className="mx-12 mt-14">
@@ -59,9 +81,13 @@ const MyToys = () => {
                                     }
                                 </>
                                 :
-                               
-                          <button className="btn loading">loading</button>
 
+                                <tr>
+                                   <td>
+                                   <button className="btn loading">loading</button>
+
+                                   </td>
+                                </tr>
                         }
 
 
