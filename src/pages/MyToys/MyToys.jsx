@@ -17,7 +17,7 @@ useEffect(()=>{
 },[user])
 
     return (
-        <div>
+        <div className="mx-12 mt-14">
         <div className="overflow-x-auto w-full">
   <table className="table w-full">
     {/* head */}
@@ -28,10 +28,10 @@ useEffect(()=>{
             <input type="checkbox" className="checkbox" />
           </label>
         </th>
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
-        <th></th>
+        <th>Image</th>
+        <th>Toy Name</th>
+        <th>Price</th>
+        <th>Update</th>
       </tr>
     </thead>
     <tbody>
