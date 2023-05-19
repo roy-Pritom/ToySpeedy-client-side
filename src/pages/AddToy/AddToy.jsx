@@ -85,7 +85,7 @@ const AddToy = () => {
 
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Your Email</span>
+                                <span className="label-text">Your SubCategory</span>
                             </label>
                             <label className="input-group">
                                 <span>SubCategory</span>
@@ -147,14 +147,14 @@ const AddToy = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Ratting</span>
+                                <span className="label-text">Rating</span>
                             </label>
                             <label className="input-group">
-                                <span>Ratting</span>
+                                <span>Rating</span>
                                 <input className="input input-bordered w-full"
 
-                                    {...register("ratting")}
-                                    placeholder="ratting"
+                                    {...register("rating")}
+                                    placeholder="rating"
 
                                 />
                             </label>
