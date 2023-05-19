@@ -5,6 +5,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import SubCategoryCard from "../SubCategoryCard/SubCategoryCard";
 import ShoppingCard from "../ShoppingCard/ShoppingCard";
+import About from "../About/About";
 
 
 const Home = () => {
@@ -72,6 +73,7 @@ const Home = () => {
                 </Tabs>
             </div>
             <ShoppingCard></ShoppingCard>
+            <About></About>
         </div>
     );
 };
