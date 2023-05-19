@@ -1,4 +1,4 @@
-
+import './Banner.css'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
@@ -29,7 +29,7 @@ const Banner = () => {
         <div className="banner bg-gradient-to-r from-purple-500 to-pink-500 gap-5 justify-center items-center py-12 h-[600px]">
             <div className="grid md:grid-cols-2 grid-cols-1">
 
-                <div className="flex justify-center items-center ">
+                <div className="flex justify-center items-center">
                     <div className=''>
                         <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 relative">
                             <span className="inline-block">
@@ -56,7 +56,7 @@ const Banner = () => {
                             </span>
                         </h1>
 
-                        <p className='text-lg font-semibold'>
+                        <p className='text-lg '>
 
                             Discover a world of fun and excitement with our amazing collection of toy cars!
                             <br /> Experience the Thrill of High-Speed Races, Epic Stunts, and Limitless Possibilities <br /> as You Dive into a Whimsical World Where Imagination Knows no bounds.

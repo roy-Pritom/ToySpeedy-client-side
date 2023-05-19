@@ -16,3 +16,24 @@
     display: grid;
     grid-template-columns:1fr,3fr;
  } */
+
+
+
+ @keyframes colorAnimation {
+    0% {
+      background-color:purple;
+    }
+    50% {
+      background-color:blue;
+    }
+    100% {
+      background-color: green;
+    }
+  }
+  
+  .element {
+    animation-name: colorAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+ 
