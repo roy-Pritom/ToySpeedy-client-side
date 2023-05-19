@@ -13,14 +13,17 @@ const GalleryCard = ({car}) => {
     //  document.getElementById('t').style.color='red';
 
     // }
+  
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 element ">
         <div className="relative">
           <img
             className="w-full h-56 object-cover"
             src={image}
+            id='img'
             alt="Card"
           />
+        
           <div className="absolute top-2 right-2">
             <span className="px-2 py-1 bg-blue-500 text-white rounded-full text-xs font-semibold">
               New

@@ -90,9 +90,9 @@ const AddToy = () => {
                             <label className="input-group">
                                 <span>SubCategory</span>
                                 <select {...register("subCategory")} className="input input-bordered w-full">
-                                    <option value="Engineering">engineering</option>
-                                    <option value="Editor">Editor</option>
-                                    <option value="writer">Writer</option>
+                                    <option value="truck">truck</option>
+                                    <option value="sportsCar">sportsCar</option>
+                                    <option value="policeCar">policeCar</option>
                                 </select>
                             </label>
                         </div>
