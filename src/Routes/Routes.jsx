@@ -35,8 +35,8 @@ import ToyDetails from "../pages/ToyDetails/ToyDetails";
         },
         {
           path:'/allToys',
-          element:<AllToy></AllToy>,
-          loader:()=>fetch('http://localhost:5000/allToys')
+          element:<AllToy></AllToy>
+          // loader:()=>fetch('http://localhost:5000/allToys')
         },
         {
           path:'/myToys',

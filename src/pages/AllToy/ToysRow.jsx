@@ -1,8 +1,27 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { authContext } from "../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const ToysRow = ({item}) => {
     const {_id,image,name,toyName,subCategory,price,quantity}=item || {};
+    const {user}=useContext(authContext)
+    const handleDetails=()=>{
+      
+        {
+         if(!user)
+         {
+           Swal.fire({
+             title: 'Warning!',
+             text: 'You have to log in first to view details',
+             icon: 'warning',
+             confirmButtonText: 'Ok'
+           })
+         
+       }
+        }
+     }
 
     return (
        
@@ -42,7 +61,7 @@ const ToysRow = ({item}) => {
                             </td>
                             <th>
                                 <Link to={`/details/${_id}`}>
-                                <button className="btn btn-secondary hover:bg-orange-700">View details</button>
+                                <button onClick={handleDetails} className="btn btn-secondary hover:bg-orange-700">View details</button>
                                 </Link>
                             </th>
                         </tr>
