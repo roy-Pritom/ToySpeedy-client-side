@@ -46,7 +46,8 @@ import ToyDetails from "../pages/ToyDetails/ToyDetails";
 
         {
           path:'/details/:id',
-          element:<ToyDetails></ToyDetails>
+          element:<PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
+          loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
     
         }
       ]

@@ -4,7 +4,7 @@ import ToysRow from "./ToysRow";
 
 const AllToy = () => {
     const data = useLoaderData();
-    console.log(data);
+    // console.log(data);
     return (
         <div className="mx-12">
             <h1 className="text-center font-bold text-5xl mt-10 mb-12 text-transparent bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text ">Our All Products</h1>

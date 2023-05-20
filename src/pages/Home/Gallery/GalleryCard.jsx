@@ -9,11 +9,6 @@ import { FaHeart } from "react-icons/fa";
 const GalleryCard = ({car}) => {
     const {image,newPrice,toyName,oldPrice,rating}=car || {}
 
-    // const han=()=>{
-    //  document.getElementById('t').style.color='red';
-
-    // }
-  
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 element ">
         <div className="relative">
