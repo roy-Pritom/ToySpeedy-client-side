@@ -16,8 +16,11 @@ const AllToy = () => {
 
     const handleSearch=()=>{
         fetch(`http://localhost:5000/toySearch/${search}`)
-        .then(res=>res.json())
-        .then(data=>setToys(data))
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            setToys(data)
+            })
 
 
     }
@@ -42,14 +45,10 @@ const AllToy = () => {
 
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
-                    {/* head */}
+               
                     <thead>
                         <tr>
-                            {/* <th>
-                                <label>
-                                    <input type="checkbox" className="checkbox" />
-                                </label>
-                            </th> */}
+                           
                             <th>Image</th>
                             <th>Toy-Name</th>
                             <th>Seller Name</th>

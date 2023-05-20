@@ -34,6 +34,7 @@ const MyToys = () => {
                 })
                     .then(res => res.json())
                     .then(myToysData => {
+                        // console.log(myToysData);
                         if (myToysData.deletedCount > 0) {
                             Swal.fire(
                                 'Deleted!',
