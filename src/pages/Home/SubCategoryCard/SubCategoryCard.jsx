@@ -7,11 +7,11 @@ const SubCategoryCard = ({car}) => {
     const {image,toyName,price,rating}=car || {};
     return (
         <div className="card card-side shadow-xl p-5 bg-gradient-to-r from-purple-600 to-pink-200 ">
-        <figure><img src={image} className="w-72 h-48 rounded" alt="Movie"/></figure>
+        <figure><img src={image} className="md:w-72 md:h-48 rounded " alt="Movie"/></figure>
         <div className="divider divider-horizontal"></div>
         <div>
-          <h2 className="text-3xl font-bold">{toyName}</h2>
-          <p className="mt-4 mb-3 text-lg font-semibold ">Price : ${price}</p>
+          <h2 className="text-lg md:text-3xl font-bold">{toyName}</h2>
+          <p className="mt-4 mb-3 text-base md:text-lg font-semibold ">Price : ${price}</p>
           <div className="card-actions ">
             <button className="btn btn-primary">View Details</button>
           </div>

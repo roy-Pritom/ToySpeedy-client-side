@@ -37,3 +37,10 @@
     animation-iteration-count: infinite;
   }
  
+
+@media screen and (max-width:662px) {
+  .responsive-container{
+    width: 100%;
+    height: 100%;
+  }
+}

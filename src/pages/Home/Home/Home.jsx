@@ -29,11 +29,12 @@ const Home = () => {
         <div>
 
             <Banner></Banner>
-            <Gallery></Gallery>
-            <div className=" mx-auto w-[1200px] ">
-                <h2 className="text-4xl text-center font-bold mb-8">Shop By Category</h2>
+           <div className="mx-auto w-[1200px] responsive-container px-4 md:px-0">
+           <Gallery></Gallery>
+            <div className="  ">
+                <h2 className="text-2xl md:text-4xl text-center font-bold mb-8">Shop By Category</h2>
                 <Tabs>
-                    <TabList className='text-center mb-10 text-xl font-bold'>
+                    <TabList className='text-center mb-10 text-lg md:text-xl font-bold'>
                         <Tab onClick={() => handleTab('truck')} >Truck</Tab>
                         <Tab onClick={() => handleTab('sportsCar')}>Sports car</Tab>
                         <Tab onClick={() => handleTab('policeCar')}>Police car</Tab>
@@ -74,6 +75,7 @@ const Home = () => {
             </div>
             <ShoppingCard></ShoppingCard>
             <About></About>
+           </div>
         </div>
     );
 };
