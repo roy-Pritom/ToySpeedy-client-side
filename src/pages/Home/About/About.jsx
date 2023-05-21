@@ -19,7 +19,7 @@ const About = () => {
                     <p>Welcome to ToySpeedy.com We are a passionate team of toy car enthusiasts who are dedicated to bringing you the finest selection of toy cars. Whether you are a child at heart or a serious collector, we have got something for everyone.</p>
                 </div>
             </div>
-            <div  data-aos="fade-left" className=" md:absolute flex md:flex-row flex-col gap-8 md:left-72 md:top-60 
+            <div   className=" md:absolute flex md:flex-row flex-col gap-8 md:left-72 md:top-60 
             ml-6 md:ml-0">
              
                     <div className=" w-72 h-80 shadow-xl border py-7 px-8 rounded-xl bg-white">

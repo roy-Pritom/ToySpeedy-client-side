@@ -32,7 +32,7 @@ const Banner = () => {
     },[])
 
     return (
-        <div data-aos="flip-left" className="banner bg-gradient-to-r from-purple-500 to-pink-500 gap-5 justify-center items-center py-12 md:h-[600px] h-full">
+        <div data-aos="flip-left" className="banner mt-5 bg-gradient-to-r from-purple-500 to-pink-500 gap-5 justify-center items-center py-12 md:h-[600px] h-full">
             <div className="grid md:grid-cols-2 grid-cols-1">
 
                 <div className="flex justify-center items-center">

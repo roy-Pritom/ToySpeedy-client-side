@@ -55,8 +55,8 @@ const UpdatePage = () => {
 
                                 <input className="input input-bordered w-80 "
 
-                                    {...register("price")}
-                                    placeholder="user name"
+                                    {...register("price",{ required: true })}
+                                    placeholder="price"
                                     type="text"
 
 
@@ -74,8 +74,8 @@ const UpdatePage = () => {
 
                                 <input className="input input-bordered w-80"
 
-                                    {...register("quantity")}
-                                    placeholder="user name"
+                                    {...register("quantity",{ required: true })}
+                                    placeholder="quantity"
                                     type="text"
 
 
@@ -93,8 +93,8 @@ const UpdatePage = () => {
 
                                 <input className="input input-bordered w-80"
 
-                                    {...register("description")}
-                                    placeholder="user name"
+                                    {...register("description",{ required: true })}
+                                    placeholder="details"
                                     type="text"
 
 

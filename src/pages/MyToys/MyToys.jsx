@@ -51,9 +51,22 @@ const MyToys = () => {
         })
 
     }
+    const handleAscendingOrder=()=>{
+        const sort=[...toys].sort((x,y)=>x.price-y.price)
+        setToys(sort)
+    }
+    const handleDescendingOrder=()=>{
+        const sort=[...toys].sort((x,y)=>y.price-x.price)
+        setToys(sort)
+    }
 
     return (
         <div className="mx-12 mt-14">
+            <div className="btn-group flex justify-center mb-8">
+                <button className="btn btn-active" onClick={handleAscendingOrder}>Ascending</button>
+                <button className="btn" onClick={handleDescendingOrder}>Descending</button>
+
+            </div>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     {/* head */}
@@ -86,10 +99,10 @@ const MyToys = () => {
                                 :
 
                                 <tr>
-                                   <td>
-                                   <button className="btn loading">loading</button>
+                                    <td>
+                                        <button className="btn loading">loading</button>
 
-                                   </td>
+                                    </td>
                                 </tr>
                         }
 

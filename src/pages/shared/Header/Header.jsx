@@ -31,7 +31,7 @@ const Header = () => {
           </ul>
         </div>
    <div className="flex items-center">
-   <img className="h-16 w-20" src="https://img.freepik.com/free-vector/sticker-template-with-car-many-balloons_1308-61699.jpg?w=740&t=st=1684649198~exp=1684649798~hmac=196b1b02179d431fbdc5e61a42e3bab87a503088721638fe4f1d47fd9dc0741d" alt="" />
+   <img className="MD:h-16 MD:w-20 w-8 h-8" src="https://img.freepik.com/free-vector/sticker-template-with-car-many-balloons_1308-61699.jpg?w=740&t=st=1684649198~exp=1684649798~hmac=196b1b02179d431fbdc5e61a42e3bab87a503088721638fe4f1d47fd9dc0741d" alt="" />
         <a className="btn btn-ghost normal-case text-xl">ToySpeedy</a>
    </div>
       </div>
@@ -45,7 +45,7 @@ const Header = () => {
         {
           user ? <div className="flex gap-3 items-center">
             <div className="">
-              <img id="title" src={user?.photoURL} className="w-12 h-12 rounded-full" alt="" />
+              <img id="title" src={user?.photoURL} className="w-10 h-8 rounded-full" alt="" />
               <ReactTooltip anchorId='title' place="bottom" content={user?.displayName}></ReactTooltip>
             </div>
             <button className="btn btn-active btn-secondary" onClick={logOut}> logout</button>

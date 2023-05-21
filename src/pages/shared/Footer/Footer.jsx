@@ -2,17 +2,18 @@
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-neutral text-neutral-content">
+      <div className="p-10 bg-neutral">
+          <footer className="footer  text-neutral-content">
             <div>
             <img className="h-16 w-20 rounded-lg" src="https://img.freepik.com/free-vector/sticker-template-with-car-many-balloons_1308-61699.jpg?w=740&t=st=1684649198~exp=1684649798~hmac=196b1b02179d431fbdc5e61a42e3bab87a503088721638fe4f1d47fd9dc0741d" alt="" />
                 <p>ToySpeedy.com<br />Providing reliable tech since 1992</p>
             </div>
             <div>
-                <span className="footer-title">Services</span>
-                <a className="link link-hover">Branding</a>
-                <a className="link link-hover">Design</a>
-                <a className="link link-hover">Marketing</a>
-                <a className="link link-hover">Advertisement</a>
+                <span className="footer-title">Address</span>
+                <a className="link link-hover">ToySpeedy</a>
+                <a className="link link-hover">Mirpur 14</a>
+                <a className="link link-hover">Dhaka</a>
+                <a className="link link-hover">Bangladesh</a>
             </div>
             <div>
                 <span className="footer-title">Contact Us</span>
@@ -38,6 +39,9 @@ const Footer = () => {
 
             </div>
         </footer>
+        <hr className="border-gray-500 mb-4" />
+            <p className="text-center text-white">&copy; {new Date().getFullYear()} ToySpeedy. All rights reserved.</p>
+      </div>
     );
 };
 
