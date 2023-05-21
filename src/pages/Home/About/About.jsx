@@ -1,12 +1,9 @@
 import { FaRegStar,FaArrowCircleUp,FaShieldAlt} from "react-icons/fa";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from "react";
+
+
 
 const About = () => {
-    useEffect(()=>{
-        AOS.init();
-    },[])
+    
     return (
         <div className=" mb-24 md:mt-36 md:relative">
             <div className="flex  flex-col-reverse md:flex-row  md:gap-32">

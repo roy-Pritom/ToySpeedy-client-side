@@ -15,7 +15,7 @@ Customers.
 * There are 3 sub category tab .Each sub category has different toys.
 * In Blogs section has a some important react interview questions.
 ---
-## **_Everyone can easily use this site _**
+## **_Everyone can easily use this site_**
 ---
 # Live Site Link :
 ### https://assignment-11-server-site.web.app
