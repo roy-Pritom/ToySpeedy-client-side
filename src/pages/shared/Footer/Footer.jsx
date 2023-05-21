@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="footer p-10 bg-neutral text-neutral-content">
             <div>
-                <img className="h-24 w-20 rounded-full" src="https://images.unsplash.com/photo-1594535182308-8ffefbb661e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80" alt="" />
+            <img className="h-16 w-20 rounded-lg" src="https://img.freepik.com/free-vector/sticker-template-with-car-many-balloons_1308-61699.jpg?w=740&t=st=1684649198~exp=1684649798~hmac=196b1b02179d431fbdc5e61a42e3bab87a503088721638fe4f1d47fd9dc0741d" alt="" />
                 <p>ToySpeedy.com<br />Providing reliable tech since 1992</p>
             </div>
             <div>

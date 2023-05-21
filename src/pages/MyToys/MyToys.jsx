@@ -2,14 +2,16 @@ import { useContext, useEffect, useState } from "react";
 import { authContext } from "../../AuthProvider/AuthProvider";
 import MyToysRow from "./MyToysRow";
 import Swal from "sweetalert2";
+import useTitle from "../../hook/useTitle";
 
 
 const MyToys = () => {
+    useTitle('MyToys')
     const { user } = useContext(authContext)
     // console.log(user);
     const [toys, setToys] = useState();
     useEffect(() => {
-        fetch(`http://localhost:5000/myToys/${user?.email}`)
+        fetch(`https://assignment-11-server-site-teal.vercel.app/myToys/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -29,7 +31,7 @@ const MyToys = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/myToys/${id}`, {
+                fetch(`https://assignment-11-server-site-teal.vercel.app/myToys/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

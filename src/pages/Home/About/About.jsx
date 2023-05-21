@@ -1,7 +1,12 @@
 import { FaRegStar,FaArrowCircleUp,FaShieldAlt} from "react-icons/fa";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const About = () => {
+    useEffect(()=>{
+        AOS.init();
+    },[])
     return (
         <div className=" mb-24 md:mt-36 md:relative">
             <div className="flex  flex-col-reverse md:flex-row  md:gap-32">
@@ -11,10 +16,10 @@ const About = () => {
                 <div className="md:w-[40%] w-full">
                     <p className="text-pink-700 text-xl font-bold mb-4">A B O U T</p>
                     <h2 className="font-bold  text-2xl md:text-5xl mb-4">About This Site</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, dolores! Optio repellendus in, odit doloremque aperiam a fugit dolorem esse, ea atque repellat molestiae tempora dignissimos labore non distinctio ipsa!</p>
+                    <p>Welcome to ToySpeedy.com We are a passionate team of toy car enthusiasts who are dedicated to bringing you the finest selection of toy cars. Whether you are a child at heart or a serious collector, we have got something for everyone.</p>
                 </div>
             </div>
-            <div className="md:absolute flex md:flex-row flex-col gap-8 md:left-72 md:top-60 
+            <div  data-aos="fade-left" className=" md:absolute flex md:flex-row flex-col gap-8 md:left-72 md:top-60 
             ml-6 md:ml-0">
              
                     <div className=" w-72 h-80 shadow-xl border py-7 px-8 rounded-xl bg-white">
@@ -24,7 +29,7 @@ const About = () => {
                    
                         <div className="">
                             <h2 className="text-3xl font-semibold mb-2">Exclusive</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cum sit, adipisci beatae repellat assumenda velit neque ipsu.</p>
+                            <p>Your ultimate destination for all things toy cars! We are thrilled to present our exclusive section, where you will find many  collection of toy cars </p>
                          
                         </div>
                     </div>
@@ -36,7 +41,7 @@ const About = () => {
                    
                         <div className="">
                             <h2 className="text-3xl font-semibold mb-2">UPDATE</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cum sit, adipisci beatae repellat assumenda velit neque ipsu.</p>
+                            <p>We take immense pride in curating our updated exclusive section and ensuring that every toy car meets our stringent standards of quality.</p>
                          
                         </div>
                     </div>
@@ -48,7 +53,7 @@ const About = () => {
                    
                         <div className="">
                             <h2 className="text-3xl font-semibold mb-2">SECURE</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cum sit, adipisci beatae repellat assumenda velit neque ipsu.</p>
+                            <p>To further enhance your security, we recommend practicing safe browsing habits.We are available to assist you security issues.</p>
                          
                         </div>
                     </div>

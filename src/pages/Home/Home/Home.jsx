@@ -6,13 +6,15 @@ import 'react-tabs/style/react-tabs.css';
 import SubCategoryCard from "../SubCategoryCard/SubCategoryCard";
 import ShoppingCard from "../ShoppingCard/ShoppingCard";
 import About from "../About/About";
+import useTitle from "../../../hook/useTitle";
 
 
 const Home = () => {
+    useTitle('Home')
     const [category, setCategory] = useState('truck')
     const [cars, setCars] = useState();
     useEffect(() => {
-        fetch(`http://localhost:5000/allToys/${category}`)
+        fetch(`https://assignment-11-server-site-teal.vercel.app/allToys/${category}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);

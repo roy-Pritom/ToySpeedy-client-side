@@ -12,6 +12,7 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import ToyDetails from "../pages/ToyDetails/ToyDetails";
 import UpdatePage from "../pages/UpdatePage/UpdatePage";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Blog from "../pages/Blog/Blog";
 
 
   const router = createBrowserRouter([
@@ -39,24 +40,28 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
         {
           path:'/allToys',
           element:<AllToy></AllToy>
-          // loader:()=>fetch('http://localhost:5000/allToys')
+          // loader:()=>fetch('https://assignment-11-server-site-teal.vercel.app/allToys')
         },
         {
           path:'/myToys',
-          element:<MyToys></MyToys>
+          element:<PrivateRoute><MyToys></MyToys></PrivateRoute>
     
         },
 
         {
           path:'/details/:id',
           element:<PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-          loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
+          loader:({params})=>fetch(`https://assignment-11-server-site-teal.vercel.app/toys/${params.id}`)
     
         },
         {
           path:'/update/:id',
           element:<UpdatePage></UpdatePage>,
-          loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
+          loader:({params})=>fetch(`https://assignment-11-server-site-teal.vercel.app/toys/${params.id}`)
+        },
+        {
+          path:'/blog',
+          element:<Blog></Blog>
         }
       ]
     },

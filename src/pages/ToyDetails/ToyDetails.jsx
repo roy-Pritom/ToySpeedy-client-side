@@ -2,15 +2,24 @@ import { useLoaderData } from "react-router-dom";
 
 
 import { Rating } from '@smastrom/react-rating'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import '@smastrom/react-rating/style.css'
+import useTitle from "../../hook/useTitle";
+import { useEffect } from "react";
 
 const ToyDetails = () => {
+    useEffect(()=>{
+        AOS.init();
+    },[])
+    useTitle('ToyDetails')
     const toyData=useLoaderData();
     console.log(toyData);
     const {image,name,toyName,price,quantity,email,description,rating}=toyData || {};
     return (
-        <div className="bg-red-50 p-12 flex justify-center ">
+        <div data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" className="bg-red-50 p-12 flex justify-center ">
             <div className="bg-blue-100  shadow-2xl py-12 px-7 w-[1000px] border">
           
           <div className="flex justify-center">

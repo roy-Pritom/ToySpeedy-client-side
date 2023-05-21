@@ -1,8 +1,10 @@
 import { useForm } from "react-hook-form";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import useTitle from "../../hook/useTitle";
 
 const UpdatePage = () => {
+    useTitle("UpdatePage")
     const toy = useLoaderData()
     const navigate = useNavigate()
     // console.log(toy);
@@ -12,7 +14,7 @@ const UpdatePage = () => {
 
     const onSubmit = data => {
         // console.log(data);
-        fetch(`http://localhost:5000/myToys/${_id}`, {
+        fetch(`https://assignment-11-server-site-teal.vercel.app/myToys/${_id}`, {
             method: "PATCH",
             headers: {
                 'content-type': 'application/json'

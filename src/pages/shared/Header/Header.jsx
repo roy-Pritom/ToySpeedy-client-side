@@ -6,13 +6,13 @@ import { Tooltip as ReactTooltip } from "react-tooltip";
 
 
 const Header = () => {
-  const { user,logOut} = useContext(authContext)
+  const { user, logOut } = useContext(authContext)
   const navLinks = <>
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/allToys'>All Toys</Link></li>
     {user && <li><Link to='/myToys'>My Toys</Link></li>}
     {user && <li><Link to='/addToy'>Add A Toy</Link></li>}
-    <li><Link to='/'>Blogs</Link></li>
+    <li><Link to='/blog'>Blogs</Link></li>
 
 
   </>
@@ -30,7 +30,10 @@ const Header = () => {
 
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+   <div className="flex items-center">
+   <img className="h-16 w-20" src="https://img.freepik.com/free-vector/sticker-template-with-car-many-balloons_1308-61699.jpg?w=740&t=st=1684649198~exp=1684649798~hmac=196b1b02179d431fbdc5e61a42e3bab87a503088721638fe4f1d47fd9dc0741d" alt="" />
+        <a className="btn btn-ghost normal-case text-xl">ToySpeedy</a>
+   </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -38,13 +41,13 @@ const Header = () => {
         </ul>
       </div>
       <div className="navbar-end">
-      
+
         {
           user ? <div className="flex gap-3 items-center">
-           <div className="">
-           <img id="title" src={user?.photoURL} className="w-12 h-12 rounded-full" alt="" />
-            <ReactTooltip anchorId='title' place="bottom" content={user?.displayName}></ReactTooltip>
-           </div>
+            <div className="">
+              <img id="title" src={user?.photoURL} className="w-12 h-12 rounded-full" alt="" />
+              <ReactTooltip anchorId='title' place="bottom" content={user?.displayName}></ReactTooltip>
+            </div>
             <button className="btn btn-active btn-secondary" onClick={logOut}> logout</button>
           </div>
             :
